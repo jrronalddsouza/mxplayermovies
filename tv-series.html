@@ -166,9 +166,7 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 									<span style="font-family: play; color: rgb(255, 255, 255); font-size: 20px; font-weight: bold;">  Mxplayer Movies  </a>
 								</hgroup></h1></span>
 						
-						
-							<!-- end header logo -->
-
+							
 							<!-- header nav -->
 							<ul class="header__nav">
 								<!-- dropdown -->
@@ -202,7 +200,81 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 						
 						</div>
 		
-
+						<style>
+							.dropbtn {
+							  background-color: #3498DB;
+							  color: white;
+							  padding: 16px;
+							  font-size: 16px;
+							  border: none;
+							  cursor: pointer;
+							}
+							
+							.dropbtn:hover, .dropbtn:focus {
+							  background-color: #2980B9;
+							}
+							
+							.dropdown {
+							  position: relative;
+							  display: inline-block;
+							}
+							
+							.dropdown-content {
+							  display: none;
+							  position: absolute;
+							  background-color: #f1f1f1;
+							  min-width: 160px;
+							  overflow: auto;
+							  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+							  z-index: 1;
+							}
+							
+							.dropdown-content a {
+							  color: black;
+							  padding: 12px 16px;
+							  text-decoration: none;
+							  display: block;
+							}
+							
+							.dropdown a:hover {background-color: #ddd;}
+							
+							.show {display: block;}
+							</style>
+						
+							<div class="dropdown">
+							  <button onclick="myFunction()" class="dropbtn">Menu</button>
+							  <div id="myDropdown" class="dropdown-content">
+								<a href="/index">Home</a>
+								<a href="/hollywood">Hollywood</a>
+								<a href="/bollywood">Bollywood</a>
+								<a href="/adult">Adult</a>
+								<a href="/tv-series">TV-Series</a>
+								
+								
+							  </div>
+							</div>
+							
+							<script>
+							/* When the user clicks on the button, 
+							toggle between hiding and showing the dropdown content */
+							function myFunction() {
+							  document.getElementById("myDropdown").classList.toggle("show");
+							}
+							
+							// Close the dropdown if the user clicks outside of it
+							window.onclick = function(event) {
+							  if (!event.target.matches('.dropbtn')) {
+								var dropdowns = document.getElementsByClassName("dropdown-content");
+								var i;
+								for (i = 0; i < dropdowns.length; i++) {
+								  var openDropdown = dropdowns[i];
+								  if (openDropdown.classList.contains('show')) {
+									openDropdown.classList.remove('show');
+								  }
+								}
+							  }
+							}
+							</script>
 		<!-- header search -->
 			
 			<div class="container">
@@ -229,7 +301,7 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 					<div class="row">
 						<div class="col-12">		
 <!-- expected premiere -->
-<section class="section section--bg" data-bg="img/section/section.jpg">
+<!--<section class="section section--bg" data-bg="img/section/section.jpg">
 <div class="container">
 <div class="row">
 <style>
@@ -306,40 +378,9 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 		}
 	  }
 	}
-	</script>
+	</script>-->
 
-
-
-	<div class="col-12">
-	<h1 class="details__title"></h1>
-	
-	</div>
-	<!-- end title -->
-	<div class="col-12">
-	<h1 class="details__title"></h1>
-	</div>
-	<div class="col-12">
-		<h1 class="details__title"></h1>
-		
-		</div>
-		<!-- end title -->
-		<div class="col-12">
-		<h1 class="details__title"></h1>
-		</div>
-			<!-- end title -->
-	<div class="col-12">
-		<h1 class="details__title"></h1>
-		</div>
-		<div class="col-12">
-			<h1 class="details__title"></h1>
-			
-			</div>
-			<!-- end title -->
-			<div class="col-12">
-			<h1 class="details__title"></h1>
-			</div>
-				<!-- section title -->
-				<style>
+			<style>
 					.box{
 		width: 100%;
 		text-align:center;
@@ -368,6 +409,7 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 	
 	f.addEventListener('submit', submitted);
 	</script>
+	</div>
 				<div class="col-12">
 					<h2 class="section__title">Watch Latest Movies</h2>
 				</div>
@@ -376,8 +418,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 					<div class="card">
 						<div class="card__cover">
-							<a href="against-the-ice"><img src="img/12/plebs-soldiers-of-rome-2022.webp" alt="Plebs Soldiers Of Rome (2022)" type="image/webp"></a>
-							<a href="against-the-ice" class="card__play">
+							<a href="plebs-soldiers-of-rome"><img src="img/12/plebs-soldiers-of-rome-2022.webp" alt="Plebs Soldiers Of Rome (2022)" type="image/webp"></a>
+							<a href="plebs-soldiers-of-rome" class="card__play">
 								<i class="icon ion-ios-play"></i>
 							</a><p></p>
 							<style type="text/css">  
@@ -388,10 +430,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 								   </marquee></a></h2> 
 						</div>
 						<div class="card__content">
-							<h3 class="card__title"><a href="against-the-ice">Plebs Soldiers Of Rome (2022)</a></h3>
+							<h3 class="card__title"><a href="plebs-soldiers-of-rome">Plebs Soldiers Of Rome (2022)</a></h3>
 							<span class="card__category">
-								<a href="against-the-ice">Comedy</a>
-								<a href="against-the-ice">Adventure</a>
+								<a href="plebs-soldiers-of-rome">Comedy</a>
+								<a href="plebs-soldiers-of-rome">Adventure</a>
 								
 							</span>
 							<span class="card__rate"><i class="icon ion-ios-star"></i>6.7</span>
@@ -407,8 +449,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 								<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 									<div class="card">
 										<div class="card__cover">
-											<a href="against-the-ice"><img src="img/12/mindcage-2022.webp" alt="Mindcage (2022)"></a>
-											<a href="against-the-ice" class="card__play">
+											<a href="mindcage"><img src="img/12/mindcage-2022.webp" alt="Mindcage (2022)"></a>
+											<a href="mindcage" class="card__play">
 												<i class="icon ion-ios-play"></i>
 											</a><p></p>
 											<style type="text/css">  
@@ -419,10 +461,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 												   </marquee></a></h2> 
 										</div>
 										<div class="card__content">
-											<h3 class="card__title"><a href="against-the-ice">Mindcage (2022)</a></h3>
+											<h3 class="card__title"><a href="mindcage">Mindcage (2022)</a></h3>
 											<span class="card__category">
-												<a href="against-the-ice">Drama</a>
-												<a href="against-the-ice">Thriller</a>
+												<a href="mindcage">Drama</a>
+												<a href="mindcage">Thriller</a>
 												
 											</span>
 											<span class="card__rate"><i class="icon ion-ios-star"></i>4.2</span>
@@ -438,8 +480,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="card">
 								<div class="card__cover">
-									<a href="against-the-ice"><img src="img/12/human-resources-2022.webp" alt="Against The Ice (2022)"></a>
-									<a href="against-the-ice" class="card__play">
+									<a href="human-resources"><img src="img/12/human-resources-2022.webp" alt="Against The Ice (2022)"></a>
+									<a href="human-resources" class="card__play">
 										<i class="icon ion-ios-play"></i>
 									</a><p></p>
 									<style type="text/css">  
@@ -450,10 +492,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 										   </marquee></a></h2> 
 								</div>
 								<div class="card__content">
-									<h3 class="card__title"><a href="against-the-ice">Human Resources (2022)</a></h3>
+									<h3 class="card__title"><a href="human-resources">Human Resources (2022)</a></h3>
 									<span class="card__category">
-										<a href="against-the-ice">Thriller</a>
-										<a href="against-the-ice">Horror</a>
+										<a href="human-resources">Thriller</a>
+										<a href="human-resources">Horror</a>
 										
 									</span>
 									<span class="card__rate"><i class="icon ion-ios-star"></i>4.9</span>
@@ -469,8 +511,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="card">
 								<div class="card__cover">
-									<a href="against-the-ice"><img src="img/12/the-banshees-of-inisherin-2022.webp" alt="Against The Ice (2022)"></a>
-									<a href="against-the-ice" class="card__play">
+									<a href="the-banshees-of-inisherin"><img src="img/12/the-banshees-of-inisherin-2022.webp" alt="Against The Ice (2022)"></a>
+									<a href="the-banshees-of-inisherin" class="card__play">
 										<i class="icon ion-ios-play"></i>
 									</a><p></p>
 									<style type="text/css">  
@@ -481,10 +523,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 										   </marquee></a></h2> 
 								</div>
 								<div class="card__content">
-									<h3 class="card__title"><a href="against-the-ice">The Banshees of Inisherin (2022)</a></h3>
+									<h3 class="card__title"><a href="the-banshees-of-inisherin">The Banshees of Inisherin (2022)</a></h3>
 									<span class="card__category">
-										<a href="against-the-ice">Drama</a>
-										<a href="against-the-ice">Comedy</a>
+										<a href="the-banshees-of-inisherin">Drama</a>
+										<a href="the-banshees-of-inisherin">Comedy</a>
 										
 									</span>
 									<span class="card__rate"><i class="icon ion-ios-star"></i>8.0</span>
@@ -500,8 +542,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 					<div class="card">
 						<div class="card__cover">
-							<a href="against-the-ice"><img src="img/12/survive-2022.webp" alt="Survive (2022)"></a>
-							<a href="against-the-ice" class="card__play">
+							<a href="survive"><img src="img/12/survive-2022.webp" alt="Survive (2022)"></a>
+							<a href="survive" class="card__play">
 								<i class="icon ion-ios-play"></i>
 							</a><p></p>
 							<style type="text/css">  
@@ -512,10 +554,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 								   </marquee></a></h2> 
 						</div>
 						<div class="card__content">
-							<h3 class="card__title"><a href="against-the-ice">Survive (2022)</a></h3>
+							<h3 class="card__title"><a href="survive">Survive (2022)</a></h3>
 							<span class="card__category">
-								<a href="against-the-ice">Drama</a>
-								<a href="against-the-ice">Adventure</a>
+								<a href="survive">Drama</a>
+								<a href="survive">Adventure</a>
 								
 							</span>
 							<span class="card__rate"><i class="icon ion-ios-star"></i>4.2</span>
@@ -531,8 +573,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 								<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 									<div class="card">
 										<div class="card__cover">
-											<a href="against-the-ice"><img src="img/12/exploited-2022.webp" alt="Exploited (2022)"></a>
-											<a href="against-the-ice" class="card__play">
+											<a href="exploited"><img src="img/12/exploited-2022.webp" alt="Exploited (2022)"></a>
+											<a href="exploited" class="card__play">
 												<i class="icon ion-ios-play"></i>
 											</a><p></p>
 											<style type="text/css">  
@@ -543,10 +585,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 												   </marquee></a></h2> 
 										</div>
 										<div class="card__content">
-											<h3 class="card__title"><a href="against-the-ice">Exploited (2022)</a></h3>
+											<h3 class="card__title"><a href="exploited">Exploited (2022)</a></h3>
 											<span class="card__category">
-												<a href="against-the-ice">Thriller</a>
-												<a href="against-the-ice">Horror</a>
+												<a href="exploited">Thriller</a>
+												<a href="exploited">Horror</a>
 												
 											</span>
 											<span class="card__rate"><i class="icon ion-ios-star"></i>4.1</span>
@@ -562,8 +604,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 					<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 						<div class="card">
 							<div class="card__cover">
-								<a href="against-the-ice"><img src="img/12/detective-knight-redemption-2022.webp" alt="Detective Knight Redemption (2022)"></a>
-								<a href="against-the-ice" class="card__play">
+								<a href="detective-knight-redemption"><img src="img/12/detective-knight-redemption-2022.webp" alt="Detective Knight Redemption (2022)"></a>
+								<a href="detective-knight-redemption" class="card__play">
 									<i class="icon ion-ios-play"></i>
 								</a><p></p>
 								<style type="text/css">  
@@ -574,10 +616,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 									   </marquee></a></h2> 
 							</div>
 							<div class="card__content">
-								<h3 class="card__title"><a href="against-the-ice">Detective Knight Redemption (2022)</a></h3>
+								<h3 class="card__title"><a href="detective-knight-redemption">Detective Knight Redemption (2022)</a></h3>
 								<span class="card__category">
-									<a href="against-the-ice">Action</a>
-									<a href="against-the-ice">Thriller</a>
+									<a href="detective-knight-redemption">Action</a>
+									<a href="detective-knight-redemption">Thriller</a>
 									
 								</span>
 								<span class="card__rate"><i class="icon ion-ios-star"></i>4.9</span>
@@ -593,8 +635,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 					<div class="card">
 						<div class="card__cover">
-							<a href="against-the-ice"><img src="img/12/bones-and-all-2022.webp" alt="Bones And All (2022)"></a>
-							<a href="against-the-ice" class="card__play">
+							<a href="bones-and-all"><img src="img/12/bones-and-all-2022.webp" alt="Bones And All (2022)"></a>
+							<a href="bones-and-all" class="card__play">
 								<i class="icon ion-ios-play"></i>
 							</a><p></p>
 							<style type="text/css">  
@@ -605,10 +647,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 								   </marquee></a></h2> 
 						</div>
 						<div class="card__content">
-							<h3 class="card__title"><a href="against-the-ice">Bones And All (2022)</a></h3>
+							<h3 class="card__title"><a href="bones-and-all">Bones And All (2022)</a></h3>
 							<span class="card__category">
-								<a href="against-the-ice">Drama</a>
-								<a href="against-the-ice">Horror</a>
+								<a href="bones-and-all">Drama</a>
+								<a href="bones-and-all">Horror</a>
 								
 							</span>
 							<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
@@ -624,8 +666,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 					<div class="card">
 						<div class="card__cover">
-							<a href="against-the-ice"><img src="img/12/dangerous-methods-2022.webp" alt="Dangerous Methods (2022)"></a>
-							<a href="against-the-ice" class="card__play">
+							<a href="dangerous-methods"><img src="img/12/dangerous-methods-2022.webp" alt="Dangerous Methods (2022)"></a>
+							<a href="dangerous-methods" class="card__play">
 								<i class="icon ion-ios-play"></i>
 							</a><p></p>
 							<style type="text/css">  
@@ -636,10 +678,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 								   </marquee></a></h2> 
 						</div>
 						<div class="card__content">
-							<h3 class="card__title"><a href="against-the-ice">Dangerous Methods (2022)</a></h3>
+							<h3 class="card__title"><a href="dangerous-methods">Dangerous Methods (2022)</a></h3>
 							<span class="card__category">
-								<a href="against-the-ice">Crime</a>
-									<a href="against-the-ice">Horror</a>
+								<a href="dangerous-methods">Crime</a>
+									<a href="dangerous-methods">Horror</a>
 								
 							</span>
 							<span class="card__rate"><i class="icon ion-ios-star"></i>3.9</span>
@@ -655,8 +697,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 								<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 									<div class="card">
 										<div class="card__cover">
-											<a href="against-the-ice"><img src="img/12/the-witch-part2-2022.webp" alt="The Witch Part 2 The Other One (2022)"></a>
-											<a href="against-the-ice" class="card__play">
+											<a href="the-witch-part2"><img src="img/12/the-witch-part2-2022.webp" alt="The Witch Part 2 The Other One (2022)"></a>
+											<a href="the-witch-part2" class="card__play">
 												<i class="icon ion-ios-play"></i>
 											</a><p></p>
 											<style type="text/css">  
@@ -667,10 +709,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 												   </marquee></a></h2> 
 										</div>
 										<div class="card__content">
-											<h3 class="card__title"><a href="against-the-ice">The Witch Part 2 The Other One (2022)</a></h3>
+											<h3 class="card__title"><a href="the-witch-part2">The Witch Part 2 The Other One (2022)</a></h3>
 											<span class="card__category">
-												<a href="against-the-ice">Action</a>
-								                <a href="against-the-ice">Sci-Fi</a>
+												<a href="the-witch-part2">Action</a>
+								                <a href="the-witch-part2">Sci-Fi</a>
 												
 											</span>
 											<span class="card__rate"><i class="icon ion-ios-star"></i>6.2</span>
@@ -686,8 +728,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 					<div class="card">
 						<div class="card__cover">
-							<a href="against-the-ice"><img src="img/12/the-witch-part1-2022.webp" alt="The Witch Part 1 The Subversion (2022)"></a>
-							<a href="against-the-ice" class="card__play">
+							<a href="the-witch-part1"><img src="img/12/the-witch-part1-2022.webp" alt="The Witch Part 1 The Subversion (2022)"></a>
+							<a href="the-witch-part1" class="card__play">
 								<i class="icon ion-ios-play"></i>
 							</a><p></p>
 							<style type="text/css">  
@@ -698,10 +740,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 								   </marquee></a></h2> 
 						</div>
 						<div class="card__content">
-							<h3 class="card__title"><a href="against-the-ice">The Witch Part 1 The Subversion (2022)</a></h3>
+							<h3 class="card__title"><a href="the-witch-part1">The Witch Part 1 The Subversion (2022)</a></h3>
 							<span class="card__category">
-								<a href="against-the-ice">Action</a>
-								<a href="against-the-ice">Sci-Fi</a>
+								<a href="the-witch-part1">Action</a>
+								<a href="the-witch-part1">Sci-Fi</a>
 								
 							</span>
 							<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
@@ -717,8 +759,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 					<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 						<div class="card">
 							<div class="card__cover">
-								<a href="against-the-ice"><img src="img/12/physics-wallah-2022.webp" alt="Physics Wallah (2022)"></a>
-								<a href="against-the-ice" class="card__play">
+								<a href="physics-wallah"><img src="img/12/physics-wallah-2022.webp" alt="Physics Wallah (2022)"></a>
+								<a href="physics-wallah" class="card__play">
 									<i class="icon ion-ios-play"></i>
 								</a><p></p>
 								<style type="text/css">  
@@ -729,10 +771,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 									   </marquee></a></h2> 
 							</div>
 							<div class="card__content">
-								<h3 class="card__title"><a href="against-the-ice">Physics Wallah (2022)</a></h3>
+								<h3 class="card__title"><a href="physics-wallah">Physics Wallah (2022)</a></h3>
 								<span class="card__category">
-									<a href="against-the-ice">Biography</a>
-									<a href="against-the-ice">Drama</a>
+									<a href="physics-wallah">Biography</a>
+									<a href="physics-wallah">Drama</a>
 									
 								</span>
 								<span class="card__rate"><i class="icon ion-ios-star"></i>8.7</span>
@@ -748,8 +790,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="card">
 								<div class="card__cover">
-									<a href="against-the-ice"><img src="img/12/indian-predator-murder-in-a-courtroom-2022.webp" alt="Indian Predator Murder in a Courtroom (2022)"></a>
-									<a href="against-the-ice" class="card__play">
+									<a href="indian-predator-murder-in-a-courtroom"><img src="img/12/indian-predator-murder-in-a-courtroom-2022.webp" alt="Indian Predator Murder in a Courtroom (2022)"></a>
+									<a href="indian-predator-murder-in-a-courtroom" class="card__play">
 										<i class="icon ion-ios-play"></i>
 									</a><p></p>
 									<style type="text/css">  
@@ -760,10 +802,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 										   </marquee></a></h2> 
 								</div>
 								<div class="card__content">
-									<h3 class="card__title"><a href="against-the-ice">Indian Predator Murder in a Courtroom (2022)</a></h3>
+									<h3 class="card__title"><a href="indian-predator-murder-in-a-courtroom">Indian Predator Murder in a Courtroom (2022)</a></h3>
 									<span class="card__category">
-										<a href="against-the-ice">Documentery</a>
-										<a href="against-the-ice">Crime</a>
+										<a href="indian-predator-murder-in-a-courtroom">Documentery</a>
+										<a href="indian-predator-murder-in-a-courtroom">Crime</a>
 										
 									</span>
 									<span class="card__rate"><i class="icon ion-ios-star"></i>7.3</span>
@@ -779,8 +821,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="card">
 								<div class="card__cover">
-									<a href="against-the-ice"><img src="img/12/govinda-naam-mera-2022.webp" alt="Govinda Naam Mera (2022)"></a>
-									<a href="against-the-ice" class="card__play">
+									<a href="govinda-naam-mera"><img src="img/12/govinda-naam-mera-2022.webp" alt="Govinda Naam Mera (2022)"></a>
+									<a href="govinda-naam-mera" class="card__play">
 										<i class="icon ion-ios-play"></i>
 									</a><p></p>
 									<style type="text/css">  
@@ -791,10 +833,10 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 										   </marquee></a></h2> 
 								</div>
 								<div class="card__content">
-									<h3 class="card__title"><a href="against-the-ice">Govinda Naam Mera (2022)</a></h3>
+									<h3 class="card__title"><a href="govinda-naam-mera">Govinda Naam Mera (2022)</a></h3>
 									<span class="card__category">
-										<a href="against-the-ice">Crime</a>
-										<a href="against-the-ice">Comedy</a>
+										<a href="govinda-naam-mera">Crime</a>
+										<a href="govinda-naam-mera">Comedy</a>
 										
 									</span>
 									<span class="card__rate"><i class="icon ion-ios-star"></i>6.4</span>
@@ -810,22 +852,22 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="card">
 								<div class="card__cover">
-									<a href="against-the-ice"><img src="img/12/fall-2022.webp" alt="Fall (2022)"></a>
-									<a href="against-the-ice" class="card__play">
+									<a href="fall"><img src="img/12/fall-2022.webp" alt="Fall (2022)"></a>
+									<a href="fall" class="card__play">
 										<i class="icon ion-ios-play"></i>
 									</a><p></p>
 									<style type="text/css">  
 										.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
 												  </style>
 									   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
-										<span style="color: #00FF00; font-weight: bold;"> Fall (2022) </span> Description: Best friends Becky and Hunter find themselves at the top of a 2,000-foot radio tower.
+										<span style="color: #00FF00; font-weight: bold;"> Fall (2022) </span> Description: Follows a young woman called Divya who lost her memory 24 hours prior to her unsuccessful suicide attempt. She tries to find out the truth of what really happened to her, but she can't trust anyone, not even her closest friends and family, as she discovers secrets and lies locked deep in her memory.
 										   </marquee></a></h2> 
 								</div>
 								<div class="card__content">
-									<h3 class="card__title"><a href="against-the-ice">Fall (2022)</a></h3>
+									<h3 class="card__title"><a href="fall">Fall (2022)</a></h3>
 									<span class="card__category">
-										<a href="against-the-ice">Drama</a>
-										<a href="against-the-ice">Thriller</a>
+										<a href="fall">Drama</a>
+										<a href="fall">Thriller</a>
 										
 									</span>
 									<span class="card__rate"><i class="icon ion-ios-star"></i>6.4</span>
@@ -841,8 +883,8 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 					<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 						<div class="card">
 							<div class="card__cover">
-								<a href="against-the-ice"><img src="img/12/faadu-2022.webp" alt="Faadu A Love Story (2022)"></a>
-								<a href="against-the-ice" class="card__play">
+								<a href="faadu"><img src="img/12/faadu-2022.webp" alt="Faadu A Love Story (2022)"></a>
+								<a href="faadu" class="card__play">
 									<i class="icon ion-ios-play"></i>
 								</a><p></p>
 								<style type="text/css">  
@@ -853,13 +895,13 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 									   </marquee></a></h2> 
 							</div>
 							<div class="card__content">
-								<h3 class="card__title"><a href="against-the-ice">Faadu A Love Story (2022)</a></h3>
+								<h3 class="card__title"><a href="faadu">Faadu A Love Story (2022)</a></h3>
 								<span class="card__category">
-									<a href="against-the-ice">Romance</a>
-									<a href="against-the-ice">Drama</a>
+									<a href="faadu">Romance</a>
+									<a href="faadu">Drama</a>
 									
 								</span>
-								<span class="card__rate"><i class="icon ion-ios-star"></i>8.0</span>
+								<span class="card__rate"><i class="icon ion-ios-star"></i>8.1</span>
 								<ul class="card__list">
 									<li>HD</li>
 									<li>HIN</li>

@@ -192,7 +192,82 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 						
 						</div>
 		
-
+						<style>
+							.dropbtn {
+							  background-color: #3498DB;
+							  color: white;
+							  padding: 16px;
+							  font-size: 16px;
+							  border: none;
+							  cursor: pointer;
+							}
+							
+							.dropbtn:hover, .dropbtn:focus {
+							  background-color: #2980B9;
+							}
+							
+							.dropdown {
+							  position: relative;
+							  display: inline-block;
+							}
+							
+							.dropdown-content {
+							  display: none;
+							  position: absolute;
+							  background-color: #f1f1f1;
+							  min-width: 160px;
+							  overflow: auto;
+							  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+							  z-index: 1;
+							}
+							
+							.dropdown-content a {
+							  color: black;
+							  padding: 12px 16px;
+							  text-decoration: none;
+							  display: block;
+							}
+							
+							.dropdown a:hover {background-color: #ddd;}
+							
+							.show {display: block;}
+							</style>
+						
+							<div class="dropdown">
+							  <button onclick="myFunction()" class="dropbtn">Menu</button>
+							  <div id="myDropdown" class="dropdown-content">
+								<a href="/index">Home</a>
+								<a href="/hollywood">Hollywood</a>
+								<a href="/bollywood">Bollywood</a>
+								<a href="/adult">Adult</a>
+								<a href="/tv-series">TV-Series</a>
+								
+								
+							  </div>
+							</div>
+							
+							<script>
+							/* When the user clicks on the button, 
+							toggle between hiding and showing the dropdown content */
+							function myFunction() {
+							  document.getElementById("myDropdown").classList.toggle("show");
+							}
+							
+							// Close the dropdown if the user clicks outside of it
+							window.onclick = function(event) {
+							  if (!event.target.matches('.dropbtn')) {
+								var dropdowns = document.getElementsByClassName("dropdown-content");
+								var i;
+								for (i = 0; i < dropdowns.length; i++) {
+								  var openDropdown = dropdowns[i];
+								  if (openDropdown.classList.contains('show')) {
+									openDropdown.classList.remove('show');
+								  }
+								}
+							  }
+							}
+							</script>
+		<!-- header search -->
 		<!-- header search -->
 			
 			<div class="container">
@@ -219,116 +294,6 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 				<div class="container">
 					<div class="row">
 						<div class="col-12">		
-<!-- expected premiere -->
-<section class="section section--bg" data-bg="img/section/section.jpg">
-<div class="container">
-<div class="row">
-<style>
-	.dropbtn {
-	  background-color: #3498DB;
-	  color: white;
-	  padding: 16px;
-	  font-size: 16px;
-	  border: none;
-	  cursor: pointer;
-	}
-	
-	.dropbtn:hover, .dropbtn:focus {
-	  background-color: #2980B9;
-	}
-	
-	.dropdown {
-	  position: relative;
-	  display: inline-block;
-	}
-	
-	.dropdown-content {
-	  display: none;
-	  position: absolute;
-	  background-color: #f1f1f1;
-	  min-width: 160px;
-	  overflow: auto;
-	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	  z-index: 1;
-	}
-	
-	.dropdown-content a {
-	  color: black;
-	  padding: 12px 16px;
-	  text-decoration: none;
-	  display: block;
-	}
-	
-	.dropdown a:hover {background-color: #ddd;}
-	
-	.show {display: block;}
-	</style>
-
-	<div class="dropdown">
-	  <button onclick="myFunction()" class="dropbtn">Menu</button>
-	  <div id="myDropdown" class="dropdown-content">
-		<a href="/index">Home</a>
-		<a href="/hollywood">Hollywood</a>
-		<a href="/bollywood">Bollywood</a>
-		<a href="/adult">Adult</a>
-		<a href="/tv-series">TV-Series</a>
-		
-		
-	  </div>
-	</div>
-	
-	<script>
-	/* When the user clicks on the button, 
-	toggle between hiding and showing the dropdown content */
-	function myFunction() {
-	  document.getElementById("myDropdown").classList.toggle("show");
-	}
-	
-	// Close the dropdown if the user clicks outside of it
-	window.onclick = function(event) {
-	  if (!event.target.matches('.dropbtn')) {
-		var dropdowns = document.getElementsByClassName("dropdown-content");
-		var i;
-		for (i = 0; i < dropdowns.length; i++) {
-		  var openDropdown = dropdowns[i];
-		  if (openDropdown.classList.contains('show')) {
-			openDropdown.classList.remove('show');
-		  }
-		}
-	  }
-	}
-	</script>
-
-
-
-	<div class="col-12">
-	<h1 class="details__title"></h1>
-	
-	</div>
-	<!-- end title -->
-	<div class="col-12">
-	<h1 class="details__title"></h1>
-	</div>
-	<div class="col-12">
-		<h1 class="details__title"></h1>
-		
-		</div>
-		<!-- end title -->
-		<div class="col-12">
-		<h1 class="details__title"></h1>
-		</div>
-			<!-- end title -->
-	<div class="col-12">
-		<h1 class="details__title"></h1>
-		</div>
-		<div class="col-12">
-			<h1 class="details__title"></h1>
-			
-			</div>
-			<!-- end title -->
-			<div class="col-12">
-			<h1 class="details__title"></h1>
-			</div>
 
 			<style>
 				.box{
@@ -359,10 +324,289 @@ win.focus();
 
 f.addEventListener('submit', submitted);
 </script>
+						</div>
 				<!-- section title -->
 				<div class="col-12">
 					<h2 class="section__title">Watch Latest Movies</h2>
 				</div>
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<a href="plebs-soldiers-of-rome"><img src="img/12/plebs-soldiers-of-rome-2022.webp" alt="Plebs Soldiers Of Rome (2022)" type="image/webp"></a>
+							<a href="plebs-soldiers-of-rome" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a><p></p>
+							<style type="text/css">  
+								.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+										  </style>
+							   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+								<span style="color: #00FF00; font-weight: bold;"> Plebs Soldiers Of Rome (2022) </span> Description: Three Plebs join the army in peace-time, hoping to win respect, romance and military discounts at selected restaurants. But when war's declared they're sent to fight on the front line of a Roman legion for a cause they don't believe in. Now their main interest is the struggle for survival.
+								   </marquee></a></h2> 
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="plebs-soldiers-of-rome">Plebs Soldiers Of Rome (2022)</a></h3>
+							<span class="card__category">
+								<a href="plebs-soldiers-of-rome">Comedy</a>
+								<a href="plebs-soldiers-of-rome">Adventure</a>
+								
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>6.7</span>
+							<ul class="card__list">
+								<li>HD</li>
+								<li>ENG</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+								<!-- end section title -->
+								<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+									<div class="card">
+										<div class="card__cover">
+											<a href="mindcage"><img src="img/12/mindcage-2022.webp" alt="Mindcage (2022)"></a>
+											<a href="mindcage" class="card__play">
+												<i class="icon ion-ios-play"></i>
+											</a><p></p>
+											<style type="text/css">  
+												.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+														  </style>
+											   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+												<span style="color: #00FF00; font-weight: bold;"> Mindcage (2022) </span> Description: When a copycat strikes, two detectives ask a top serial killer for help.
+												   </marquee></a></h2> 
+										</div>
+										<div class="card__content">
+											<h3 class="card__title"><a href="mindcage">Mindcage (2022)</a></h3>
+											<span class="card__category">
+												<a href="mindcage">Drama</a>
+												<a href="mindcage">Thriller</a>
+												
+											</span>
+											<span class="card__rate"><i class="icon ion-ios-star"></i>4.2</span>
+											<ul class="card__list">
+												<li>HD</li>
+												<li>ENG</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- end card -->
+						<!-- end section title -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<a href="human-resources"><img src="img/12/human-resources-2022.webp" alt="Against The Ice (2022)"></a>
+									<a href="human-resources" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a><p></p>
+									<style type="text/css">  
+										.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+												  </style>
+									   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+										<span style="color: #00FF00; font-weight: bold;"> Human Resources (2022) </span> Description: After starting a job at an eerie hardware store, an anxious young man uncovers a shocking mystery that leads to a fight against terrifying forces that lurk just behind the walls.
+										   </marquee></a></h2> 
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="human-resources">Human Resources (2022)</a></h3>
+									<span class="card__category">
+										<a href="human-resources">Thriller</a>
+										<a href="human-resources">Horror</a>
+										
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>4.9</span>
+									<ul class="card__list">
+										<li>HD</li>
+										<li>ENG</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+						<!-- end section title -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<a href="the-banshees-of-inisherin"><img src="img/12/the-banshees-of-inisherin-2022.webp" alt="Against The Ice (2022)"></a>
+									<a href="the-banshees-of-inisherin" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a><p></p>
+									<style type="text/css">  
+										.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+												  </style>
+									   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+										<span style="color: #00FF00; font-weight: bold;"> The Banshees of Inisherin (2022) </span> Description: Two lifelong friends find themselves at an impasse when one abruptly ends their relationship, with alarming consequences for both of them.
+										   </marquee></a></h2> 
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="the-banshees-of-inisherin">The Banshees of Inisherin (2022)</a></h3>
+									<span class="card__category">
+										<a href="the-banshees-of-inisherin">Drama</a>
+										<a href="the-banshees-of-inisherin">Comedy</a>
+										
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>8.0</span>
+									<ul class="card__list">
+										<li>HD</li>
+										<li>ENG</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+										<!-- end section title -->
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<a href="survive"><img src="img/12/survive-2022.webp" alt="Survive (2022)"></a>
+							<a href="survive" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a><p></p>
+							<style type="text/css">  
+								.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+										  </style>
+							   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+								<span style="color: #00FF00; font-weight: bold;">Survive (2022) </span> Description: When their plane crashes on a remote snow-covered mountain, Jane and Paul have to fight for their lives as the only remaining survivors. Together they embark on a harrowing journey out of the wilderness.
+								   </marquee></a></h2> 
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="survive">Survive (2022)</a></h3>
+							<span class="card__category">
+								<a href="survive">Drama</a>
+								<a href="survive">Adventure</a>
+								
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>4.2</span>
+							<ul class="card__list">
+								<li>HD</li>
+								<li>ENG</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+								<!-- end section title -->
+								<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+									<div class="card">
+										<div class="card__cover">
+											<a href="exploited"><img src="img/12/exploited-2022.webp" alt="Exploited (2022)"></a>
+											<a href="exploited" class="card__play">
+												<i class="icon ion-ios-play"></i>
+											</a><p></p>
+											<style type="text/css">  
+												.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+														  </style>
+											   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+												<span style="color: #00FF00; font-weight: bold;"> Exploited (2022) </span> Description: A college freshman becomes obsessed with the previous owner of his school issued laptop.
+												   </marquee></a></h2> 
+										</div>
+										<div class="card__content">
+											<h3 class="card__title"><a href="exploited">Exploited (2022)</a></h3>
+											<span class="card__category">
+												<a href="exploited">Thriller</a>
+												<a href="exploited">Horror</a>
+												
+											</span>
+											<span class="card__rate"><i class="icon ion-ios-star"></i>4.1</span>
+											<ul class="card__list">
+												<li>HD</li>
+												<li>ENG</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- end card -->
+					<!-- end section title -->
+					<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+						<div class="card">
+							<div class="card__cover">
+								<a href="detective-knight-redemption"><img src="img/12/detective-knight-redemption-2022.webp" alt="Detective Knight Redemption (2022)"></a>
+								<a href="detective-knight-redemption" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a><p></p>
+								<style type="text/css">  
+									.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+											  </style>
+								   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+									<span style="color: #00FF00; font-weight: bold;"> Detective Knight Redemption (2022) </span> Description: In custody in New York, Detective James Knight finds himself in the middle of a jailbreak led by The Christmas Bomber, a brutal fanatic whose Santa Claus disciples are terrorizing the city. With the promised return of his badge in exchange for taking out the terrorists, the steely-eyed Knight doles out mercy for the just...and merciless justice for all the rest.
+									   </marquee></a></h2> 
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="detective-knight-redemption">Detective Knight Redemption (2022)</a></h3>
+								<span class="card__category">
+									<a href="detective-knight-redemption">Action</a>
+									<a href="detective-knight-redemption">Thriller</a>
+									
+								</span>
+								<span class="card__rate"><i class="icon ion-ios-star"></i>4.9</span>
+								<ul class="card__list">
+									<li>HD</li>
+									<li>ENG</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->
+				<!-- end section title -->
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<a href="bones-and-all"><img src="img/12/bones-and-all-2022.webp" alt="Bones And All (2022)"></a>
+							<a href="bones-and-all" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a><p></p>
+							<style type="text/css">  
+								.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+										  </style>
+							   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+								<span style="color: #00FF00; font-weight: bold;"> Bones And All (2022) </span> Description: Maren, a young woman, learns how to survive on the margins of society.
+								   </marquee></a></h2> 
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="bones-and-all">Bones And All (2022)</a></h3>
+							<span class="card__category">
+								<a href="bones-and-all">Drama</a>
+								<a href="bones-and-all">Horror</a>
+								
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+							<ul class="card__list">
+								<li>HD</li>
+								<li>ENG</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+				<!-- end section title -->
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<a href="dangerous-methods"><img src="img/12/dangerous-methods-2022.webp" alt="Dangerous Methods (2022)"></a>
+							<a href="dangerous-methods" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a><p></p>
+							<style type="text/css">  
+								.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+										  </style>
+							   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+								<span style="color: #00FF00; font-weight: bold;"> Dangerous Methods (2022) </span> Description: An ambitious Hollywood assistant finds herself in a hellish, live-or-death situation when she agrees to live in isolation with an overbearing Method actor who wants an extreme experience far from civilization while preparing for his next role.
+								   </marquee></a></h2> 
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="dangerous-methods">Dangerous Methods (2022)</a></h3>
+							<span class="card__category">
+								<a href="dangerous-methods">Crime</a>
+									<a href="dangerous-methods">Horror</a>
+								
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>3.9</span>
+							<ul class="card__list">
+								<li>HD</li>
+								<li>ENG</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
 				<!-- end section title -->
 				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 					<div class="card">

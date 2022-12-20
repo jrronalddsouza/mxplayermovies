@@ -188,7 +188,81 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 						
 						</div>
 		
-
+						<style>
+							.dropbtn {
+							  background-color: #3498DB;
+							  color: white;
+							  padding: 16px;
+							  font-size: 16px;
+							  border: none;
+							  cursor: pointer;
+							}
+							
+							.dropbtn:hover, .dropbtn:focus {
+							  background-color: #2980B9;
+							}
+							
+							.dropdown {
+							  position: relative;
+							  display: inline-block;
+							}
+							
+							.dropdown-content {
+							  display: none;
+							  position: absolute;
+							  background-color: #f1f1f1;
+							  min-width: 160px;
+							  overflow: auto;
+							  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+							  z-index: 1;
+							}
+							
+							.dropdown-content a {
+							  color: black;
+							  padding: 12px 16px;
+							  text-decoration: none;
+							  display: block;
+							}
+							
+							.dropdown a:hover {background-color: #ddd;}
+							
+							.show {display: block;}
+							</style>
+						
+							<div class="dropdown">
+							  <button onclick="myFunction()" class="dropbtn">Menu</button>
+							  <div id="myDropdown" class="dropdown-content">
+								<a href="/index">Home</a>
+								<a href="/hollywood">Hollywood</a>
+								<a href="/bollywood">Bollywood</a>
+								<a href="/adult">Adult</a>
+								<a href="/tv-series">TV-Series</a>
+								
+								
+							  </div>
+							</div>
+							
+							<script>
+							/* When the user clicks on the button, 
+							toggle between hiding and showing the dropdown content */
+							function myFunction() {
+							  document.getElementById("myDropdown").classList.toggle("show");
+							}
+							
+							// Close the dropdown if the user clicks outside of it
+							window.onclick = function(event) {
+							  if (!event.target.matches('.dropbtn')) {
+								var dropdowns = document.getElementsByClassName("dropdown-content");
+								var i;
+								for (i = 0; i < dropdowns.length; i++) {
+								  var openDropdown = dropdowns[i];
+								  if (openDropdown.classList.contains('show')) {
+									openDropdown.classList.remove('show');
+								  }
+								}
+							  }
+							}
+							</script>
 		<!-- header search -->
 			
 			<div class="container">
@@ -214,118 +288,6 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 					<div class="row">
 						<div class="col-12">
 							
-	<!-- expected premiere -->
-	<section class="section section--bg" data-bg="img/section/section.jpg">
-		<div class="container">
-			<div class="row">
-				
-				<style>
-					.dropbtn {
-					  background-color: #3498DB;
-					  color: white;
-					  padding: 16px;
-					  font-size: 16px;
-					  border: none;
-					  cursor: pointer;
-					}
-					
-					.dropbtn:hover, .dropbtn:focus {
-					  background-color: #2980B9;
-					}
-					
-					.dropdown {
-					  position: relative;
-					  display: inline-block;
-					}
-					
-					.dropdown-content {
-					  display: none;
-					  position: absolute;
-					  background-color: #f1f1f1;
-					  min-width: 160px;
-					  overflow: auto;
-					  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-					  z-index: 1;
-					}
-					
-					.dropdown-content a {
-					  color: black;
-					  padding: 12px 16px;
-					  text-decoration: none;
-					  display: block;
-					}
-					
-					.dropdown a:hover {background-color: #ddd;}
-					
-					.show {display: block;}
-					</style>
-				
-					<div class="dropdown">
-				  <button onclick="myFunction()" class="dropbtn">Menu</button>
-				  <div id="myDropdown" class="dropdown-content">
-					<a href="/index">Home</a>
-					<a href="/hollywood">Hollywood</a>
-					<a href="/bollywood">Bollywood</a>
-					<a href="/adult">Adult</a>
-					<a href="/tv-series">TV-Series</a>
-						<a href="/tv-series">TV-Series</a>
-						
-						
-					  </div>
-					</div>
-					
-					<script>
-					/* When the user clicks on the button, 
-					toggle between hiding and showing the dropdown content */
-					function myFunction() {
-					  document.getElementById("myDropdown").classList.toggle("show");
-					}
-					
-					// Close the dropdown if the user clicks outside of it
-					window.onclick = function(event) {
-					  if (!event.target.matches('.dropbtn')) {
-						var dropdowns = document.getElementsByClassName("dropdown-content");
-						var i;
-						for (i = 0; i < dropdowns.length; i++) {
-						  var openDropdown = dropdowns[i];
-						  if (openDropdown.classList.contains('show')) {
-							openDropdown.classList.remove('show');
-						  }
-						}
-					  }
-					}
-					</script>
-			
-			
-			
-					<div class="col-12">
-					<h1 class="details__title"></h1>
-					
-					</div>
-					<!-- end title -->
-					<div class="col-12">
-					<h1 class="details__title"></h1>
-					</div>
-					<div class="col-12">
-						<h1 class="details__title"></h1>
-						
-						</div>
-						<!-- end title -->
-						<div class="col-12">
-						<h1 class="details__title"></h1>
-						</div>
-							<!-- end title -->
-					<div class="col-12">
-						<h1 class="details__title"></h1>
-						</div>
-						<div class="col-12">
-							<h1 class="details__title"></h1>
-							
-							</div>
-							<!-- end title -->
-							<div class="col-12">
-							<h1 class="details__title"></h1>
-							</div>
 				<!-- section title -->
 				<style>
 					.box{
@@ -356,10 +318,167 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 	
 	f.addEventListener('submit', submitted);
 	</script>
+	</div>
 				<div class="col-12">
 					<h2 class="section__title">Watch Latest Movies</h2>
 				</div>
 				<!-- end section title -->
+										<!-- end section title -->
+										<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+											<div class="card">
+												<div class="card__cover">
+													<a href="lovely-ladies-dormitory"><img src="img/12/lovely-ladies-dormitory-2022.webp" alt="Lovely Ladies Dormitory (2022)"></a>
+													<a href="lovely-ladies-dormitory" class="card__play">
+														<i class="icon ion-ios-play"></i>
+													</a><p></p>
+													<style type="text/css">  
+														.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+																  </style>
+													   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+														<span style="color: #00FF00; font-weight: bold;"> Lovely Ladies Dormitory (2022) </span> Description: Five modern women live together under one roof as they deal with their families, career, and men; and explore their colorful sex lives.
+														   </marquee></a></h2> 
+												</div>
+												<div class="card__content">
+													<h3 class="card__title"><a href="lovely-ladies-dormitory">Lovely Ladies Dormitory (2022)</a></h3>
+													<span class="card__category">
+														<a href="lovely-ladies-dormitory">Adult</a>
+														<a href="lovely-ladies-dormitory">Hot</a>
+														
+													</span>
+													<span class="card__rate"><i class="icon ion-ios-star"></i>7.5</span>
+													<ul class="card__list">
+														<li>HD</li>
+														<li>+18HIN</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<!-- end card -->
+										<!-- end section title -->
+										<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+											<div class="card">
+												<div class="card__cover">
+													<a href="nikah"><img src="img/12/nikah-2022.webp" alt="Nikah (2022)"></a>
+													<a href="nikah" class="card__play">
+														<i class="icon ion-ios-play"></i>
+													</a><p></p>
+													<style type="text/css">  
+														.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+																  </style>
+													   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+														<span style="color: #00FF00; font-weight: bold;"> Nikah (2022) </span> Description: Two brothers together betrayed a beautiful girl.  After that, love was trapped in the affair of marriage and later betrayed.
+														   </marquee></a></h2> 
+												</div>
+												<div class="card__content">
+													<h3 class="card__title"><a href="nikah">Nikah (2022)</a></h3>
+													<span class="card__category">
+														<a href="nikah">Adult</a>
+														<a href="nikah">Hot</a>
+														
+													</span>
+													<span class="card__rate"><i class="icon ion-ios-star"></i>7.5</span>
+													<ul class="card__list">
+														<li>HD</li>
+														<li>+18HIN</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<!-- end card -->
+									<!-- end section title -->
+									<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+										<div class="card">
+											<div class="card__cover">
+												<a href="dream"><img src="img/12/dream-2022.webp" alt="Dream (2022)"></a>
+												<a href="dream" class="card__play">
+													<i class="icon ion-ios-play"></i>
+												</a><p></p>
+												<style type="text/css">  
+													.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+															  </style>
+												   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+													<span style="color: #00FF00; font-weight: bold;"> Dream (2022) </span> Description: A girl was involved in her studies, she was taken to Mumbai by showing her the dream of heroine, but she did not get anything except deception.
+													   </marquee></a></h2> 
+											</div>
+											<div class="card__content">
+												<h3 class="card__title"><a href="dream">Dream (2022)</a></h3>
+												<span class="card__category">
+													<a href="dream">Adult</a>
+													<a href="dream">Hot</a>
+													
+												</span>
+												<span class="card__rate"><i class="icon ion-ios-star"></i>7.5</span>
+												<ul class="card__list">
+													<li>HD</li>
+													<li>+18HIN</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- end card -->
+									<!-- end section title -->
+									<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+										<div class="card">
+											<div class="card__cover">
+												<a href="shak"><img src="img/12/shak-2022.webp" alt="Shak (2022)"></a>
+												<a href="shak" class="card__play">
+													<i class="icon ion-ios-play"></i>
+												</a><p></p>
+												<style type="text/css">  
+													.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+															  </style>
+												   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+													<span style="color: #00FF00; font-weight: bold;"> Shak (2022) </span> Description: A girl crossed all the lines of doubt on her lover, and that same doubt ended her love story.
+													   </marquee></a></h2> 
+											</div>
+											<div class="card__content">
+												<h3 class="card__title"><a href="shak">Shak (2022)</a></h3>
+												<span class="card__category">
+													<a href="shak">Adult</a>
+													<a href="shak">Hot</a>
+													
+												</span>
+												<span class="card__rate"><i class="icon ion-ios-star"></i>7.5</span>
+												<ul class="card__list">
+													<li>HD</li>
+													<li>+18HIN</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- end card -->
+									
+									<!-- end section title -->
+									<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+										<div class="card">
+											<div class="card__cover">
+												<a href="struggle"><img src="img/12/struggle-2022.webp" alt="Struggle (2022)"></a>
+												<a href="struggle" class="card__play">
+													<i class="icon ion-ios-play"></i>
+												</a><p></p>
+												<style type="text/css">  
+													.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+															  </style>
+												   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+													<span style="color: #00FF00; font-weight: bold;"> Struggle (2022) </span> Description: A girl cheats her friend to become a actress and ends up with the wrong person, and her life becomes worthless.
+													   </marquee></a></h2> 
+											</div>
+											<div class="card__content">
+												<h3 class="card__title"><a href="struggle">Struggle (2022)</a></h3>
+												<span class="card__category">
+													<a href="struggle">Adult</a>
+													<a href="struggle">Hot</a>
+													
+												</span>
+												<span class="card__rate"><i class="icon ion-ios-star"></i>7.5</span>
+												<ul class="card__list">
+													<li>HD</li>
+													<li>+18HIN</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- end card -->	
 				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 					<div class="card">
 						<div class="card__cover">

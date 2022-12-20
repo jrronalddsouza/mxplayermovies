@@ -230,41 +230,89 @@ box-shadow: 0px 0px 15px 5px #e1edf2;
 							<!-- end header menu btn -->
 						
 						</div>
-		
+						<style>
+							.dropbtn {
+							  background-color: #3498DB;
+							  color: white;
+							  padding: 16px;
+							  font-size: 16px;
+							  border: none;
+							  cursor: pointer;
+							}
+							
+							.dropbtn:hover, .dropbtn:focus {
+							  background-color: #2980B9;
+							}
+							
+							.dropdown {
+							  position: relative;
+							  display: inline-block;
+							}
+							
+							.dropdown-content {
+							  display: none;
+							  position: absolute;
+							  background-color: #f1f1f1;
+							  min-width: 160px;
+							  overflow: auto;
+							  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+							  z-index: 1;
+							}
+							
+							.dropdown-content a {
+							  color: black;
+							  padding: 12px 16px;
+							  text-decoration: none;
+							  display: block;
+							}
+							
+							.dropdown a:hover {background-color: #ddd;}
+							
+							.show {display: block;}
+							</style>
+						
+							<div class="dropdown">
+							  <button onclick="myFunction()" class="dropbtn">Menu</button>
+							  <div id="myDropdown" class="dropdown-content">
+								<a href="/index">Home</a>
+								<a href="/hollywood">Hollywood</a>
+								<a href="/bollywood">Bollywood</a>
+								<a href="/adult">Adult</a>
+								<a href="/tv-series">TV-Series</a>
+								
+								
+							  </div>
+							</div>
+							
+							<script>
+							/* When the user clicks on the button, 
+							toggle between hiding and showing the dropdown content */
+							function myFunction() {
+							  document.getElementById("myDropdown").classList.toggle("show");
+							}
+							
+							// Close the dropdown if the user clicks outside of it
+							window.onclick = function(event) {
+							  if (!event.target.matches('.dropbtn')) {
+								var dropdowns = document.getElementsByClassName("dropdown-content");
+								var i;
+								for (i = 0; i < dropdowns.length; i++) {
+								  var openDropdown = dropdowns[i];
+								  if (openDropdown.classList.contains('show')) {
+									openDropdown.classList.remove('show');
+								  }
+								}
+							  }
+							}
+							</script>
+		<!-- header search -->
 
 		<!-- header search -->
 			
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						
-						<!-- header search -->	
-					<!--<center>
-						<form id="form"> 							 
-							<input type="search" id="query" name="q" placeholder="Search for a movie, TV Series that you are looking for">
-							<button><span style="font-family: play; color: rgb(247, 7, 7); font-size: x-large; font-weight: bold;">Search</button></span>
-						  </form>
-						</center>
-						<p></p>-->
-		<!-- end header search -->
-<!--	<script>
-const f = document.getElementById('form');
-const q = document.getElementById('query');
-const google = 'https://www.google.com/search?q=site%3A+';
-const site = 'https://mxplayermovies.netlify.app/';
-
-function submitted(event) {
-  event.preventDefault();
-  const url = google + site + '+' + q.value;
-  const win = window.open(url, '_blank');
-  win.focus();
-}
-
-f.addEventListener('submit', submitted);
-</script>-->
-
-
-	
+					
 	</header>
 	<!-- end header -->
 
@@ -278,33 +326,6 @@ f.addEventListener('submit', submitted);
 			<div class="item home__cover" data-bg="img/home/home__bg3.jpg"></div>
 			<div class="item home__cover" data-bg="img/home/home__bg4.jpg"></div>
 		</div>
-		
-	<!-- end home bg -->
-		<!--<section class="content">
-			<div class="content__head">
-				<div class="container">
-					<div class="row">
-				
-						<div class="col-12">
-							
-							<ul class="nav nav-tabs content__tabs" id="content__tabs" role="tablist">
-								<li class="nav-item">
-									<a class="nav-link active"  href="index" role="tab" aria-controls="tab-1" aria-selected="true" >NEW RELEASES</a>
-								</li>
-	
-								<li class="nav-item">
-									<a class="nav-link"  href="index" role="tab" aria-controls="tab-2" aria-selected="false">MOVIES</a>
-								</li>
-	
-								<li class="nav-item">
-									<a class="nav-link"  href="tv-series" role="tab" aria-controls="tab-3" aria-selected="false">TV SERIES</a>
-								</li>
-	
-								<li class="nav-item">
-									<a class="nav-link"  href="adult" role="tab" aria-controls="tab-4" aria-selected="false">ADULT</a>
-								</li>
-							</ul>
-						<p></p>-->
 								
 						<section class="content">
 							<div class="content__head">
@@ -313,7 +334,7 @@ f.addEventListener('submit', submitted);
 										<div class="col-12">		
 	<!-- expected premiere -->
 	
-		<div class="container">
+		<!--<div class="container">
 			<div class="row">
 				<style>
 					.dropbtn {
@@ -396,32 +417,9 @@ f.addEventListener('submit', submitted);
 					<div class="col-12">
 					<h5 class="details__title"></h5>
 					
-					</div>
+					</div>-->
 					<!-- end title -->
-					<div class="col-12">
-					<h4 class="details__title"></h4>
-					</div>
-					<div class="col-12">
-						<h2 class="details__title"></h2>
-						
-						</div>
-						<!-- end title -->
-						<div class="col-12">
-						<h3 class="details__title"></h3>
-						</div>
-							<!-- end title -->
-					<div class="col-12">
-						<h4 class="details__title"></h4>
-						</div>
-						<div class="col-12">
-							<h5 class="details__title"></h5>
-							
-							</div>
-							<!-- end title -->
-							<div class="col-12">
-							<h6 class="details__title"></h6>
-							</div>
-				
+			
 				<!-- header search -->	
 				<style>
 				.box{
@@ -452,11 +450,787 @@ win.focus();
 
 f.addEventListener('submit', submitted);
 </script>
-			
+</div>
 				<!-- section title -->
 				<div class="col-12">
 					<h2 class="section__title">Watch Latest Movies</h2>
 				</div>
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<a href="plebs-soldiers-of-rome"><img src="img/12/plebs-soldiers-of-rome-2022.webp" alt="Plebs Soldiers Of Rome (2022)" type="image/webp"></a>
+							<a href="plebs-soldiers-of-rome" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a><p></p>
+							<style type="text/css">  
+								.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+										  </style>
+							   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+								<span style="color: #00FF00; font-weight: bold;"> Plebs Soldiers Of Rome (2022) </span> Description: Three Plebs join the army in peace-time, hoping to win respect, romance and military discounts at selected restaurants. But when war's declared they're sent to fight on the front line of a Roman legion for a cause they don't believe in. Now their main interest is the struggle for survival.
+								   </marquee></a></h2> 
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="plebs-soldiers-of-rome">Plebs Soldiers Of Rome (2022)</a></h3>
+							<span class="card__category">
+								<a href="plebs-soldiers-of-rome">Comedy</a>
+								<a href="plebs-soldiers-of-rome">Adventure</a>
+								
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>6.7</span>
+							<ul class="card__list">
+								<li>HD</li>
+								<li>ENG</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+								<!-- end section title -->
+								<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+									<div class="card">
+										<div class="card__cover">
+											<a href="mindcage"><img src="img/12/mindcage-2022.webp" alt="Mindcage (2022)"></a>
+											<a href="mindcage" class="card__play">
+												<i class="icon ion-ios-play"></i>
+											</a><p></p>
+											<style type="text/css">  
+												.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+														  </style>
+											   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+												<span style="color: #00FF00; font-weight: bold;"> Mindcage (2022) </span> Description: When a copycat strikes, two detectives ask a top serial killer for help.
+												   </marquee></a></h2> 
+										</div>
+										<div class="card__content">
+											<h3 class="card__title"><a href="mindcage">Mindcage (2022)</a></h3>
+											<span class="card__category">
+												<a href="mindcage">Drama</a>
+												<a href="mindcage">Thriller</a>
+												
+											</span>
+											<span class="card__rate"><i class="icon ion-ios-star"></i>4.2</span>
+											<ul class="card__list">
+												<li>HD</li>
+												<li>ENG</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- end card -->
+						<!-- end section title -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<a href="human-resources"><img src="img/12/human-resources-2022.webp" alt="Against The Ice (2022)"></a>
+									<a href="human-resources" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a><p></p>
+									<style type="text/css">  
+										.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+												  </style>
+									   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+										<span style="color: #00FF00; font-weight: bold;"> Human Resources (2022) </span> Description: After starting a job at an eerie hardware store, an anxious young man uncovers a shocking mystery that leads to a fight against terrifying forces that lurk just behind the walls.
+										   </marquee></a></h2> 
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="human-resources">Human Resources (2022)</a></h3>
+									<span class="card__category">
+										<a href="human-resources">Thriller</a>
+										<a href="human-resources">Horror</a>
+										
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>4.9</span>
+									<ul class="card__list">
+										<li>HD</li>
+										<li>ENG</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+						<!-- end section title -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<a href="the-banshees-of-inisherin"><img src="img/12/the-banshees-of-inisherin-2022.webp" alt="Against The Ice (2022)"></a>
+									<a href="the-banshees-of-inisherin" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a><p></p>
+									<style type="text/css">  
+										.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+												  </style>
+									   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+										<span style="color: #00FF00; font-weight: bold;"> The Banshees of Inisherin (2022) </span> Description: Two lifelong friends find themselves at an impasse when one abruptly ends their relationship, with alarming consequences for both of them.
+										   </marquee></a></h2> 
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="the-banshees-of-inisherin">The Banshees of Inisherin (2022)</a></h3>
+									<span class="card__category">
+										<a href="the-banshees-of-inisherin">Drama</a>
+										<a href="the-banshees-of-inisherin">Comedy</a>
+										
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>8.0</span>
+									<ul class="card__list">
+										<li>HD</li>
+										<li>ENG</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+										<!-- end section title -->
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<a href="survive"><img src="img/12/survive-2022.webp" alt="Survive (2022)"></a>
+							<a href="survive" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a><p></p>
+							<style type="text/css">  
+								.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+										  </style>
+							   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+								<span style="color: #00FF00; font-weight: bold;">Survive (2022) </span> Description: When their plane crashes on a remote snow-covered mountain, Jane and Paul have to fight for their lives as the only remaining survivors. Together they embark on a harrowing journey out of the wilderness.
+								   </marquee></a></h2> 
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="survive">Survive (2022)</a></h3>
+							<span class="card__category">
+								<a href="survive">Drama</a>
+								<a href="survive">Adventure</a>
+								
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>4.2</span>
+							<ul class="card__list">
+								<li>HD</li>
+								<li>ENG</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+								<!-- end section title -->
+								<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+									<div class="card">
+										<div class="card__cover">
+											<a href="exploited"><img src="img/12/exploited-2022.webp" alt="Exploited (2022)"></a>
+											<a href="exploited" class="card__play">
+												<i class="icon ion-ios-play"></i>
+											</a><p></p>
+											<style type="text/css">  
+												.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+														  </style>
+											   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+												<span style="color: #00FF00; font-weight: bold;"> Exploited (2022) </span> Description: A college freshman becomes obsessed with the previous owner of his school issued laptop.
+												   </marquee></a></h2> 
+										</div>
+										<div class="card__content">
+											<h3 class="card__title"><a href="exploited">Exploited (2022)</a></h3>
+											<span class="card__category">
+												<a href="exploited">Thriller</a>
+												<a href="exploited">Horror</a>
+												
+											</span>
+											<span class="card__rate"><i class="icon ion-ios-star"></i>4.1</span>
+											<ul class="card__list">
+												<li>HD</li>
+												<li>ENG</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- end card -->
+					<!-- end section title -->
+					<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+						<div class="card">
+							<div class="card__cover">
+								<a href="detective-knight-redemption"><img src="img/12/detective-knight-redemption-2022.webp" alt="Detective Knight Redemption (2022)"></a>
+								<a href="detective-knight-redemption" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a><p></p>
+								<style type="text/css">  
+									.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+											  </style>
+								   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+									<span style="color: #00FF00; font-weight: bold;"> Detective Knight Redemption (2022) </span> Description: In custody in New York, Detective James Knight finds himself in the middle of a jailbreak led by The Christmas Bomber, a brutal fanatic whose Santa Claus disciples are terrorizing the city. With the promised return of his badge in exchange for taking out the terrorists, the steely-eyed Knight doles out mercy for the just...and merciless justice for all the rest.
+									   </marquee></a></h2> 
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="detective-knight-redemption">Detective Knight Redemption (2022)</a></h3>
+								<span class="card__category">
+									<a href="detective-knight-redemption">Action</a>
+									<a href="detective-knight-redemption">Thriller</a>
+									
+								</span>
+								<span class="card__rate"><i class="icon ion-ios-star"></i>4.9</span>
+								<ul class="card__list">
+									<li>HD</li>
+									<li>ENG</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->
+				<!-- end section title -->
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<a href="bones-and-all"><img src="img/12/bones-and-all-2022.webp" alt="Bones And All (2022)"></a>
+							<a href="bones-and-all" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a><p></p>
+							<style type="text/css">  
+								.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+										  </style>
+							   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+								<span style="color: #00FF00; font-weight: bold;"> Bones And All (2022) </span> Description: Maren, a young woman, learns how to survive on the margins of society.
+								   </marquee></a></h2> 
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="bones-and-all">Bones And All (2022)</a></h3>
+							<span class="card__category">
+								<a href="bones-and-all">Drama</a>
+								<a href="bones-and-all">Horror</a>
+								
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+							<ul class="card__list">
+								<li>HD</li>
+								<li>ENG</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+				<!-- end section title -->
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<a href="dangerous-methods"><img src="img/12/dangerous-methods-2022.webp" alt="Dangerous Methods (2022)"></a>
+							<a href="dangerous-methods" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a><p></p>
+							<style type="text/css">  
+								.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+										  </style>
+							   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+								<span style="color: #00FF00; font-weight: bold;"> Dangerous Methods (2022) </span> Description: An ambitious Hollywood assistant finds herself in a hellish, live-or-death situation when she agrees to live in isolation with an overbearing Method actor who wants an extreme experience far from civilization while preparing for his next role.
+								   </marquee></a></h2> 
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="dangerous-methods">Dangerous Methods (2022)</a></h3>
+							<span class="card__category">
+								<a href="dangerous-methods">Crime</a>
+									<a href="dangerous-methods">Horror</a>
+								
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>3.9</span>
+							<ul class="card__list">
+								<li>HD</li>
+								<li>ENG</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+								<!-- end section title -->
+								<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+									<div class="card">
+										<div class="card__cover">
+											<a href="the-witch-part2"><img src="img/12/the-witch-part2-2022.webp" alt="The Witch Part 2 The Other One (2022)"></a>
+											<a href="the-witch-part2" class="card__play">
+												<i class="icon ion-ios-play"></i>
+											</a><p></p>
+											<style type="text/css">  
+												.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+														  </style>
+											   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+												<span style="color: #00FF00; font-weight: bold;"> The Witch Part 2 The Other One (2022) </span> Description: A girl wakes up in a secret laboratory and meets Kyung-hee, who is trying to protect her from a gang. When the gang finally finds the girl, they are overwhelmed by an unexpected power.
+												   </marquee></a></h2> 
+										</div>
+										<div class="card__content">
+											<h3 class="card__title"><a href="the-witch-part2">The Witch Part 2 The Other One (2022)</a></h3>
+											<span class="card__category">
+												<a href="the-witch-part2">Action</a>
+								                <a href="the-witch-part2">Sci-Fi</a>
+												
+											</span>
+											<span class="card__rate"><i class="icon ion-ios-star"></i>6.2</span>
+											<ul class="card__list">
+												<li>HD</li>
+												<li>HIN</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- end card -->
+				<!-- end section title -->
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<a href="the-witch-part1"><img src="img/12/the-witch-part1-2022.webp" alt="The Witch Part 1 The Subversion (2022)"></a>
+							<a href="the-witch-part1" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a><p></p>
+							<style type="text/css">  
+								.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+										  </style>
+							   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+								<span style="color: #00FF00; font-weight: bold;"> The Witch Part 1 The Subversion (2022) </span> Description: A high school student with amnesia tries to uncover what has happened to her. All leading her into deeper troubles ultimately revealing a darkness she could not have imagined.
+								   </marquee></a></h2> 
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="the-witch-part1">The Witch Part 1 The Subversion (2022)</a></h3>
+							<span class="card__category">
+								<a href="the-witch-part1">Action</a>
+								<a href="the-witch-part1">Sci-Fi</a>
+								
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+							<ul class="card__list">
+								<li>HD</li>
+								<li>HIN</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+					<!-- end section title -->
+					<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+						<div class="card">
+							<div class="card__cover">
+								<a href="physics-wallah"><img src="img/12/physics-wallah-2022.webp" alt="Physics Wallah (2022)"></a>
+								<a href="physics-wallah" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a><p></p>
+								<style type="text/css">  
+									.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+											  </style>
+								   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+									<span style="color: #00FF00; font-weight: bold;"> Physics Wallah (2022) </span> Description: A young, bright and visionary teacher's inspirational journey to create a new age, advanced and highly affordable, parallel education system while fighting the monopolistic, corporate giants and overcoming several internal battles.
+									   </marquee></a></h2> 
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="physics-wallah">Physics Wallah (2022)</a></h3>
+								<span class="card__category">
+									<a href="physics-wallah">Biography</a>
+									<a href="physics-wallah">Drama</a>
+									
+								</span>
+								<span class="card__rate"><i class="icon ion-ios-star"></i>8.7</span>
+								<ul class="card__list">
+									<li>HD</li>
+									<li>HIN</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->
+						<!-- end section title -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<a href="indian-predator-murder-in-a-courtroom"><img src="img/12/indian-predator-murder-in-a-courtroom-2022.webp" alt="Indian Predator Murder in a Courtroom (2022)"></a>
+									<a href="indian-predator-murder-in-a-courtroom" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a><p></p>
+									<style type="text/css">  
+										.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+												  </style>
+									   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+										<span style="color: #00FF00; font-weight: bold;"> Indian Predator Murder in a Courtroom (2022) </span> Description: In 2004, a brutal predator was lynched in a courtroom. This is the story of the community he terrorized - and the vengeance they unleashed.
+										   </marquee></a></h2> 
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="indian-predator-murder-in-a-courtroom">Indian Predator Murder in a Courtroom (2022)</a></h3>
+									<span class="card__category">
+										<a href="indian-predator-murder-in-a-courtroom">Documentery</a>
+										<a href="indian-predator-murder-in-a-courtroom">Crime</a>
+										
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.3</span>
+									<ul class="card__list">
+										<li>HD</li>
+										<li>HIN</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+						<!-- end section title -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<a href="govinda-naam-mera"><img src="img/12/govinda-naam-mera-2022.webp" alt="Govinda Naam Mera (2022)"></a>
+									<a href="govinda-naam-mera" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a><p></p>
+									<style type="text/css">  
+										.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+												  </style>
+									   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+										<span style="color: #00FF00; font-weight: bold;"> Govinda Naam Mera (2022) </span> Description: The very charming Govinda Waghmare juggles his time and love between his wife Mrs. Waghmare and his girlfriend in this dose of chaos, confusion, and laughter.
+										   </marquee></a></h2> 
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="govinda-naam-mera">Govinda Naam Mera (2022)</a></h3>
+									<span class="card__category">
+										<a href="govinda-naam-mera">Crime</a>
+										<a href="govinda-naam-mera">Comedy</a>
+										
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>6.4</span>
+									<ul class="card__list">
+										<li>HD</li>
+										<li>HIN</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+						<!-- end section title -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<a href="fall"><img src="img/12/fall-2022.webp" alt="Fall (2022)"></a>
+									<a href="fall" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a><p></p>
+									<style type="text/css">  
+										.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+												  </style>
+									   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+										<span style="color: #00FF00; font-weight: bold;"> Fall (2022) </span> Description: Follows a young woman called Divya who lost her memory 24 hours prior to her unsuccessful suicide attempt. She tries to find out the truth of what really happened to her, but she can't trust anyone, not even her closest friends and family, as she discovers secrets and lies locked deep in her memory.
+										   </marquee></a></h2> 
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="fall">Fall (2022)</a></h3>
+									<span class="card__category">
+										<a href="fall">Drama</a>
+										<a href="fall">Thriller</a>
+										
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>6.4</span>
+									<ul class="card__list">
+										<li>HD</li>
+										<li>HIN</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+					<!-- end section title -->
+					<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+						<div class="card">
+							<div class="card__cover">
+								<a href="faadu"><img src="img/12/faadu-2022.webp" alt="Faadu A Love Story (2022)"></a>
+								<a href="faadu" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a><p></p>
+								<style type="text/css">  
+									.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+											  </style>
+								   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+									<span style="color: #00FF00; font-weight: bold;"> Faadu A Love Story (2022) </span> Description: In the ambitious journey of need and greed, Abhay, the poet falls in love with Manjiri, a poetess who has a different philosophy about life. Will Abhay choose love and simplicity or money and complexity?
+									   </marquee></a></h2> 
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="faadu">Faadu A Love Story (2022)</a></h3>
+								<span class="card__category">
+									<a href="faadu">Romance</a>
+									<a href="faadu">Drama</a>
+									
+								</span>
+								<span class="card__rate"><i class="icon ion-ios-star"></i>8.1</span>
+								<ul class="card__list">
+									<li>HD</li>
+									<li>HIN</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->
+					<!-- end section title -->
+					<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+						<div class="card">
+							<div class="card__cover">
+								<a href="beast-of-bangalore-indian-predator"><img src="img/12/beast-of-bangalore-indian-predator-2022.webp" alt="Beast of Bangalore - Indian Predator (2022)"></a>
+								<a href="beast-of-bangalore-indian-predator" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a><p></p>
+								<style type="text/css">  
+									.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+											  </style>
+								   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+									<span style="color: #00FF00; font-weight: bold;"> Beast of Bangalore - Indian Predator (2022) </span> Description: A dangerous predator on the streets of Bangalore, lurking in the shadows leaving women feeling unsafe. He changed the whole landscape of this city.
+									   </marquee></a></h2> 
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="beast-of-bangalore-indian-predator">Beast of Bangalore - Indian Predator (2022)</a></h3>
+								<span class="card__category">
+									<a href="beast-of-bangalore-indian-predator">Documentery</a>
+									<a href="beast-of-bangalore-indian-predator">Crime</a>
+									
+								</span>
+								<span class="card__rate"><i class="icon ion-ios-star"></i>6.4</span>
+								<ul class="card__list">
+									<li>HD</li>
+									<li>HIN</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->	
+						<!-- end section title -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<a href="king-of-serpent"><img src="img/12/king-of-serpent-2022.webp" alt="King of Serpent (2022)"></a>
+									<a href="king-of-serpent" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a><p></p>
+									<style type="text/css">  
+										.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+												  </style>
+									   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+										<span style="color: #00FF00; font-weight: bold;"> King of Serpent (2022) </span> Description: The film tells the story of Chen Zheng and co.’s fight with the greedy snake catchers to preserve the endangered python. Chen Zheng, retired special soldier and national snake data collector went for data on King Serpent Island with Zhou Xiaoxiao and Ma Fen.
+										   </marquee></a></h2> 
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="king-of-serpent">King of Serpent (2022)</a></h3>
+									<span class="card__category">
+										<a href="king-of-serpent">Action</a>
+										<a href="king-of-serpent">Adventure</a>
+										
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>8.9</span>
+									<ul class="card__list">
+										<li>HD</li>
+										<li>HIN</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+					<!-- end section title -->
+					<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+						<div class="card">
+							<div class="card__cover">
+								<a href="kshamisi-nimma-khatheyalli-hanavilla"><img src="img/12/kshamisi-nimma-khatheyalli-hanavilla-2022.webp" alt="Kshamisi Nimma khatheyalli Hanavilla (2022)"></a>
+								<a href="kshamisi-nimma-khatheyalli-hanavilla" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a><p></p>
+								<style type="text/css">  
+									.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+											  </style>
+								   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+									<span style="color: #00FF00; font-weight: bold;"> Kshamisi Nimma khatheyalli Hanavilla (2022) </span> Description: Set in Malnad, Kshamisi Nimma Khaatheyalli Hanavilla is a story about a miser who runs a fertilizer shop. He thinks twice before spending a single paisa.
+									   </marquee></a></h2> 
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="kshamisi-nimma-khatheyalli-hanavilla">Kshamisi Nimma khatheyalli Hanavilla (2022)</a></h3>
+								<span class="card__category">
+									<a href="kshamisi-nimma-khatheyalli-hanavilla">Drama</a>
+									<a href="kshamisi-nimma-khatheyalli-hanavilla">Comedy</a>
+									
+								</span>
+								<span class="card__rate"><i class="icon ion-ios-star"></i>6.6</span>
+								<ul class="card__list">
+									<li>HD</li>
+									<li>KAN</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->											
+					
+						<!-- end section title -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<a href="head-bush"><img src="img/12/head-bush-2022.webp" alt="Head Bush (2022)"></a>
+									<a href="head-bush" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a><p></p>
+									<style type="text/css">  
+										.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+												  </style>
+									   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+										<span style="color: #00FF00; font-weight: bold;">Head Bush (2022) </span> Description: Political-crime drama on Bangalore Underworld based on Agni Sridhar's Autobiography "My Days in the Underworld".
+										   </marquee></a></h2> 
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="head-bush">Head Bush (2022)</a></h3>
+									<span class="card__category">
+										<a href="head-bush">Actiom</a>
+										<a href="head-bush">Crime</a>
+										
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+									<ul class="card__list">
+										<li>HD</li>
+										<li>KAN</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+						<!-- end section title -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<a href="lovely-ladies-dormitory"><img src="img/12/lovely-ladies-dormitory-2022.webp" alt="Lovely Ladies Dormitory (2022)"></a>
+									<a href="lovely-ladies-dormitory" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a><p></p>
+									<style type="text/css">  
+										.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+												  </style>
+									   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+										<span style="color: #00FF00; font-weight: bold;"> Lovely Ladies Dormitory (2022) </span> Description: Five modern women live together under one roof as they deal with their families, career, and men; and explore their colorful sex lives.
+										   </marquee></a></h2> 
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="lovely-ladies-dormitory">Lovely Ladies Dormitory (2022)</a></h3>
+									<span class="card__category">
+										<a href="lovely-ladies-dormitory">Adult</a>
+										<a href="lovely-ladies-dormitory">Hot</a>
+										
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.5</span>
+									<ul class="card__list">
+										<li>HD</li>
+										<li>+18HIN</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+						<!-- end section title -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<a href="nikah"><img src="img/12/nikah-2022.webp" alt="Nikah (2022)"></a>
+									<a href="nikah" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a><p></p>
+									<style type="text/css">  
+										.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+												  </style>
+									   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+										<span style="color: #00FF00; font-weight: bold;"> Nikah (2022) </span> Description: Two brothers together betrayed a beautiful girl.  After that, love was trapped in the affair of marriage and later betrayed.
+										   </marquee></a></h2> 
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="nikah">Nikah (2022)</a></h3>
+									<span class="card__category">
+										<a href="nikah">Adult</a>
+										<a href="nikah">Hot</a>
+										
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.5</span>
+									<ul class="card__list">
+										<li>HD</li>
+										<li>+18HIN</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+					<!-- end section title -->
+					<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+						<div class="card">
+							<div class="card__cover">
+								<a href="dream"><img src="img/12/dream-2022.webp" alt="Dream (2022)"></a>
+								<a href="dream" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a><p></p>
+								<style type="text/css">  
+									.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+											  </style>
+								   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+									<span style="color: #00FF00; font-weight: bold;"> Dream (2022) </span> Description: A girl was involved in her studies, she was taken to Mumbai by showing her the dream of heroine, but she did not get anything except deception.
+									   </marquee></a></h2> 
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="dream">Dream (2022)</a></h3>
+								<span class="card__category">
+									<a href="dream">Adult</a>
+									<a href="dream">Hot</a>
+									
+								</span>
+								<span class="card__rate"><i class="icon ion-ios-star"></i>7.5</span>
+								<ul class="card__list">
+									<li>HD</li>
+									<li>+18HIN</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->
+					<!-- end section title -->
+					<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+						<div class="card">
+							<div class="card__cover">
+								<a href="shak"><img src="img/12/shak-2022.webp" alt="Shak (2022)"></a>
+								<a href="shak" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a><p></p>
+								<style type="text/css">  
+									.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+											  </style>
+								   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+									<span style="color: #00FF00; font-weight: bold;"> Shak (2022) </span> Description: A girl crossed all the lines of doubt on her lover, and that same doubt ended her love story.
+									   </marquee></a></h2> 
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="shak">Shak (2022)</a></h3>
+								<span class="card__category">
+									<a href="shak">Adult</a>
+									<a href="shak">Hot</a>
+									
+								</span>
+								<span class="card__rate"><i class="icon ion-ios-star"></i>7.5</span>
+								<ul class="card__list">
+									<li>HD</li>
+									<li>+18HIN</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->
+					
+					<!-- end section title -->
+					<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+						<div class="card">
+							<div class="card__cover">
+								<a href="struggle"><img src="img/12/struggle-2022.webp" alt="Struggle (2022)"></a>
+								<a href="struggle" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a><p></p>
+								<style type="text/css">  
+									.html-marquee110 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
+											  </style>
+								   <marquee class="html-marquee110"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
+									<span style="color: #00FF00; font-weight: bold;"> Struggle (2022) </span> Description: A girl cheats her friend to become a actress and ends up with the wrong person, and her life becomes worthless.
+									   </marquee></a></h2> 
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="struggle">Struggle (2022)</a></h3>
+								<span class="card__category">
+									<a href="struggle">Adult</a>
+									<a href="struggle">Hot</a>
+									
+								</span>
+								<span class="card__rate"><i class="icon ion-ios-star"></i>7.5</span>
+								<ul class="card__list">
+									<li>HD</li>
+									<li>+18HIN</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end card -->	
 				<!-- end section title -->
 				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 					<div class="card">
@@ -4493,355 +5267,6 @@ f.addEventListener('submit', submitted);
 					</div>
 				</div>
 				<!-- end card -->
-	<!-- card -->
-	<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-		<div class="card">
-			<div class="card__cover">
-				<a href="cia-comrade-in-america"><img src="img/10/cia-comrade-in-america-2022.webp" alt=" CIA (Comrade in America) (2022)">
-				</a><p></p>
-				<a href="cia-comrade-in-america" class="card__play">
-					<i class="icon ion-ios-play"></i>
-				</a>
-				<style type="text/css">  
-					.html-marquee40 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
-							  </style>
-				   <marquee class="html-marquee40"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
-					<span style="color: #00FF00; font-weight: bold;"> CIA (Comrade in America) (2022) </span>  Description:A young man in Kerala has two weeks to stop the woman he loves from a fixed marriage in the U.S., but he doesn't have the papers to get there.
-					   </marquee></a></h2>
-			</div>
-			<div class="card__content">
-				<h3 class="card__title"><a href="cia-comrade-in-america"> CIA (2022)</a></h3>
-				<span class="card__category">
-					<a href="cia-comrade-in-america">Action</a>
-					<a href="cia-comrade-in-america">Drama</a>
-					<a href="cia-comrade-in-america">Adventure</a>
-				</span>
-				<span class="card__rate"><i class="icon ion-ios-star"></i>6.4</span>
-				<ul class="card__list">
-					<li>HD</li>
-					<li>HIN</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- end card -->
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<a href="luckiest-girl-alive"><img src="img/10/luckiest-girl-alive-2022.webp" alt="Luckiest Girl Alive (2022) "></a>
-							<a href="luckiest-girl-alive" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a><p></p>
-							<style type="text/css">  
-								.html-marquee41 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
-										  </style>
-							   <marquee class="html-marquee41"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
-								<span style="color: #00FF00; font-weight: bold;"> Luckiest Girl Alive (2022) </span>  Description: A woman in New York, who seems to have things under control, is faced with a trauma that makes her life unravel.
-								   </marquee></a></h2>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="luckiest-girl-alive">Luckiest Girl Alive (2022) </a></h3>
-							<span class="card__category">
-								<a href="luckiest-girl-alive">Drama</a>
-								<a href="luckiest-girl-alive">Mystery</a>
-								<a href="luckiest-girl-alive">Thriller</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>6.4</span>
-							<ul class="card__list">
-								<li>HD</li>
-								<li>HIN</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-
-			
-
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<a href="judaa-hoke-bhi"><img src="img/10/judaa-hoke-bhi-2022.webp" alt="Judaa Hoke Bhi (2022)">	</a>
-							<a href="judaa-hoke-bhi" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a><p></p>
-							<style type="text/css">  
-								.html-marquee42 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
-										  </style>
-							   <marquee class="html-marquee42"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
-								<span style="color: #00FF00; font-weight: bold;"> Judaa Hoke Bhi (2022) </span>  Description: Aman Khanna, a once successful singer, is drowning his life into alcohol, despair and self- destruction after his 6 years old son died in a freak accident. 
-								   </marquee></a></h2>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="judaa-hoke-bhi">Judaa Hoke Bhi (2022)</a></h3>
-							<span class="card__category">
-								<a href="judaa-hoke-bhi">Action</a>
-								<a href="judaa-hoke-bhi">Thriler</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>6.7</span>
-							<ul class="card__list">
-								<li>HD</li>
-								<li>HIN</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<a href="godfather"><img src="img/10/godfather-2022.webp" alt="Godfather (2022)"></a>
-							<a href="godfather" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a><p></p>
-							<style type="text/css">  
-								.html-marquee42 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
-										  </style>
-							   <marquee class="html-marquee42"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
-								<span style="color: #00FF00; font-weight: bold;"> Godfather (2022) </span>  Description: After the death of a political leader, a mysterious man steps in to ascend the throne.
-								   </marquee></a></h2>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="godfather">Godfather (2022)</a></h3>
-							<span class="card__category">
-								<a href="godfather">Action</a>
-								<a href="godfather">Crime</a>
-								<a href="godfather">Drama</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>6.1</span>
-							<ul class="card__list">
-								<li>HD</li>
-								<li>HIN</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-
-				
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<a href="the-infernal-machine"><img src="img/10/the-infernal-machine-2022.webp" alt="The Infernal Machine (2022)"></a>
-							<a href="the-infernal-machine" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a><p></p>
-							<style type="text/css">  
-								.html-marquee50 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
-										  </style>
-							   <marquee class="html-marquee50"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
-								<span style="color: #00FF00; font-weight: bold;"> The Infernal Machine (2022) </span>  Description: A reclusive and controversial author is drawn out of hiding when he begins to receive endless letters from an obsessive fan. What ensues is a dangerous labyrinth as he searches for the person behind the cryptic messages.
-								   </marquee></a></h2>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="the-infernal-machine">The Infernal Machine (2022)</a></h3>
-							<span class="card__category">
-								<a href="the-infernal-machine">Thriller</a>
-								<a href="the-infernal-machine">Mystery</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-							<ul class="card__list">
-								<li>HD</li>
-								<li>ENG</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<a href="bandit"><img src="img/10/bandit-2022.webp" alt="Bandit (2022)"></a>
-							<a href="bandit" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a><p></p>
-							<style type="text/css">  
-								.html-marquee51 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
-										  </style>
-							   <marquee class="html-marquee51"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
-								<span style="color: #00FF00; font-weight: bold;"> Bandit (2022) </span>  Description: After escaping a Michigan prison, a charming career criminal assumes a new identity in Canada and goes on to rob a record 59 banks and jewellery stores while being hunted by a police task force. Based on the story of The Flying Bandit.
-								   </marquee></a></h2>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="bandit">Bandit (2022)</a></h3>
-							<span class="card__category">
-								<a href="bandit">Action</a>
-								<a href="bandit">Thriler</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-							<ul class="card__list">
-								<li>HD</li>
-								<li>ENG</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<a href="the-enforcer"><img src="img/10/the-enforcer-2022.webp" alt="The Enforcer (2022)"></a>
-							<a href="the-enforcer" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a><p></p>
-							<style type="text/css">  
-								.html-marquee52 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
-										  </style>
-							   <marquee class="html-marquee52"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
-								<span style="color: #00FF00; font-weight: bold;"> The Enforcer (2022) </span>  Description: An enforcer has to sacrifice everything to save a young girl he has befriended from his femme fatale boss who is involved in cybersex trafficking.
-								   </marquee></a></h2>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="the-enforcer">The Enforcer (2022)</a></h3>
-							<span class="card__category">
-								<a href="the-enforcer">Action</a>
-								<a href="the-enforcer">Crime</a>
-								<a href="the-enforcer">Drama</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>5.1</span>
-							<ul class="card__list">
-								<li>HD</li>
-								<li>ENG</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<a href="section8"><img src="img/10/section8-2022.webp" alt="Section 8 (2022)"></a>
-							<a href="section8" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a><p></p>
-							<style type="text/css">  
-								.html-marquee53 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
-										  </style>
-							   <marquee class="html-marquee53"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
-								<span style="color: #00FF00; font-weight: bold;">  Section 8 (2022) </span>  Description: After avenging the murder of his family, a former soldier is sprung from prison and recruited by a shadowy government agency.
-								   </marquee></a></h2>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="section8">Section 8 (2022)</a></h3>
-							<span class="card__category">
-								<a href="section8">Action</a>
-								<a href="section8">Drama</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>4.1</span>
-							<ul class="card__list">
-								<li>HD</li>
-								<li>ENG</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<a href="control"><img src="img/10/control-2022.webp" alt="Control (2022)"></a>
-							<a href="control" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a><p></p>
-							<style type="text/css">  
-								.html-marquee54 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
-										  </style>
-							   <marquee class="html-marquee54"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
-								<span style="color: #00FF00; font-weight: bold;">  Control (2022) </span>  Description: A woman is imprisoned by a mysterious organization intent on testing her latent psychic abilities.
-								   </marquee></a></h2>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="control">Control (2022)</a></h3>
-							<span class="card__category">
-								<a href="control">Action</a>
-								<a href="control">Sci-Fi</a>
-							
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>4.0</span>
-							<ul class="card__list">
-								<li>HD</li>
-								<li>ENG</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<a href="vickram-vedha"><img src="img/10/vickram-vedha-2022.webp" alt="Vikram Vedha (2022)"></a>
-							<a href="vickram-vedha" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a><p></p>
-							<style type="text/css">  
-								.html-marquee55 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
-										  </style>
-							   <marquee class="html-marquee55"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
-								<span style="color: #00FF00; font-weight: bold;">   Vikram Vedha (2022) </span>  Description: A tough police officer sets out to track down and kill an equally tough gangster.
-								   </marquee></a></h2>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="vickram-vedha">Vikram Vedha (2022)</a></h3>
-							<span class="card__category">
-								<a href="vickram-vedha">Action</a>
-								<a href="vickram-vedha">Drama</a>
-								<a href="vickram-vedha">Crime</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>7.3</span>
-							<ul class="card__list">
-								<li>HD</li>
-								<li>HIN</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<a href="goodbye"><img src="img/10/goodbye-2022.webp" alt="Goodbye (2022)"></a>
-							<a href="goodbye" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a><p></p>
-							<style type="text/css">  
-								.html-marquee56 {height:22px;width:150px;background-color:#212121;font-family:play;font-size:12pt;color:#40D7BC;border-width:0;}
-										  </style>
-							   <marquee class="html-marquee56"  direction="left" behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="6" >
-								<span style="color: #00FF00; font-weight: bold;">  Goodbye (2022) </span>  Description: GoodBye presents a heart-warming story about life, family and relationships.
-								   </marquee></a></h2>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="goodbye">Goodbye (2022)</a></h3>
-							<span class="card__category">
-								<a href="goodbye">Drama</a>
-								<a href="goodbye">Comedy</a>
-								<a href="goodbye">Family</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>5.7</span>
-							<ul class="card__list">
-								<li>HD</li>
-								<li>HIN</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-		
-				<!-- end card -->
-				<!-- section btn -->
 				
 				<!-- end section btn -->
 			</div>
